@@ -44,15 +44,3 @@ Description: Library for interfacing with CRL's MultiSense cameras
  lives elsewhere
  .
  The executable tools
-
-Package: libmultisense-doc
-Section: doc
-Architecture: all
-Depends: ${misc:Depends}
-Description: Library for interfacing with CRL's MultiSense cameras
- LibMultiSense is a C++ library used to interface with the MultiSense S family
- of sensors from Carnegie Robotics. This is the driver itself: the ROS interface
- lives elsewhere
- .
- Documentation
-
