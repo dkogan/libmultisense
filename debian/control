@@ -4,8 +4,7 @@ Section: devel
 Build-Depends: debhelper (>= 12),
  cmake,
  libopencv-dev,
- libturbojpeg0-dev,
- doxygen
+ libturbojpeg0-dev
 Maintainer: Dima Kogan <dkogan@debian.org>
 Uploaders: Dima Kogan <dkogan@debian.org>
 Standards-Version: 3.9.8
