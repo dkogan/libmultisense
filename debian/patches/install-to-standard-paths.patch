@@ -1,0 +1,27 @@
+diff --git a/source/LibMultiSense/CMakeLists.txt b/source/LibMultiSense/CMakeLists.txt
+index cc1a214..a26bbcd 100644
+--- a/source/LibMultiSense/CMakeLists.txt
++++ b/source/LibMultiSense/CMakeLists.txt
+@@ -158,18 +158,19 @@ endif()
+ include(CMakePackageConfigHelpers)
+ configure_package_config_file(${CMAKE_CURRENT_SOURCE_DIR}/MultiSenseConfig.cmake.in
+   ${CMAKE_CURRENT_BINARY_DIR}/MultiSenseConfig.cmake
+   INSTALL_DESTINATION lib/cmake/MultiSense)
+ 
+ # create install targets
++include(GNUInstallDirs)
+ install(TARGETS MultiSense
+   EXPORT MultiSenseTargets
+-  LIBRARY DESTINATION lib
++  LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}"
+   PUBLIC_HEADER DESTINATION include/MultiSense
+-  ARCHIVE DESTINATION lib
+-  RUNTIME DESTINATION bin
++  ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}"
++  RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
+ )
+ 
+ if(MULTISENSE_INSTALL_WIRE_PROTOCOL)
+   install(FILES
+     ${WIRE_HEADERS}
+     DESTINATION
