@@ -1,2 +1,3 @@
 no-date-time-to-make-build-reproducible.patch
 install-to-standard-paths.patch
+no-rpath.patch

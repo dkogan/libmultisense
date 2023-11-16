@@ -1,0 +1,25 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 91147c3..adaf556 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -72,20 +72,12 @@ endif ()
+ if (BASE_DIRECTORY)
+ else()
+     set(BASE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
+     set(SOURCE_DIRECTORY )
+ endif()
+ 
+-#
+-# Use full RPATH
+-#
+-set (CMAKE_SKIP_BUILD_RPATH FALSE)
+-set (CMAKE_BUILD_WITH_INSTALL_RPATH FALSE)
+-set (CMAKE_INSTALL_RPATH ${CMAKE_INSTALL_PREFIX}/lib)
+-set (CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+-
+ #
+ # Write target outputs to bin and lib directories
+ #
+ if (NOT CMAKE_ARCHIVE_OUTPUT_DIRECTORY)
+     set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+ endif ()
