@@ -1,0 +1,39 @@
+Source: libmultisense
+Priority: optional
+Section: devel
+Build-Depends: debhelper (>= 12),
+ cmake,
+ libopencv-dev,
+ libboost-dev,
+# Need 1.7 to get MRBUILD_VERSION. VERSION conflicts with the upstream build
+ mrbuild ( >= 1.7 ),
+ libturbojpeg0-dev,
+ libeigen3-dev
+Maintainer: Dima Kogan <dkogan@debian.org>
+Uploaders: Dima Kogan <dkogan@debian.org>
+Standards-Version: 3.9.8
+Vcs-Git: https://github.com/dkogan/libmultisense.git
+Vcs-Browser: https://github.com/dkogan/libmultisense.git
+
+Package: libmultisense6
+Section: libs
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Library for interfacing with CRL's MultiSense cameras
+ LibMultiSense is a C++ library used to interface with the MultiSense S family
+ of sensors from Carnegie Robotics. This is the driver itself: the ROS interface
+ lives elsewhere
+
+Package: libmultisense-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, libmultisense6 (= ${binary:Version})
+Description: Library for interfacing with CRL's MultiSense cameras
+ LibMultiSense is a C++ library used to interface with the MultiSense S family
+ of sensors from Carnegie Robotics. This is the driver itself: the ROS interface
+ lives elsewhere
+ .
+ Development files

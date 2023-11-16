@@ -1,0 +1,5 @@
+libmultisense (6.1.0) unstable; urgency=medium
+
+  * Initial packaged release
+
+ -- Dima Kogan <dkogan@debian.org>  Thu, 16 Nov 2023 14:43:16 -0800
