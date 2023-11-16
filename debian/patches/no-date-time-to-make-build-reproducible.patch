@@ -1,0 +1,19 @@
+diff --git a/source/LibMultiSense/details/public.cc b/source/LibMultiSense/details/public.cc
+index 2d780a9..750c9de 100644
+--- a/source/LibMultiSense/details/public.cc
++++ b/source/LibMultiSense/details/public.cc
+@@ -788,13 +788,13 @@ Status impl::getApiVersion(VersionType& version)
+ 
+ //
+ // Requests all versioning information
+ 
+ Status impl::getVersionInfo(system::VersionInfo& v)
+ {
+-    v.apiBuildDate            = std::string(__DATE__ ", " __TIME__);
++    v.apiBuildDate            = std::string("unknown");
+     v.apiVersion              = API_VERSION;
+     v.sensorFirmwareBuildDate = m_sensorVersion.firmwareBuildDate;
+     v.sensorFirmwareVersion   = m_sensorVersion.firmwareVersion;
+     v.sensorHardwareVersion   = m_sensorVersion.hardwareVersion;
+     v.sensorHardwareMagic     = m_sensorVersion.hardwareMagic;
+     v.sensorFpgaDna           = m_sensorVersion.fpgaDna;
