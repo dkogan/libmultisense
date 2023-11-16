@@ -4,11 +4,7 @@ Section: devel
 Build-Depends: debhelper (>= 12),
  cmake,
  libopencv-dev,
- libboost-dev,
-# Need 1.7 to get MRBUILD_VERSION. VERSION conflicts with the upstream build
- mrbuild ( >= 1.7 ),
  libturbojpeg0-dev,
- libeigen3-dev,
  doxygen
 Maintainer: Dima Kogan <dkogan@debian.org>
 Uploaders: Dima Kogan <dkogan@debian.org>
