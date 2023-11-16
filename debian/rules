@@ -10,3 +10,7 @@ override_dh_auto_configure:
 		-DMULTISENSE_BUILD_UTILITIES=ON \
 		-DBUILD_SHARED_LIBS=ON \
 		-DMULTISENSE_USE_MONOTONIC_CLOCK=OFF
+
+override_dh_auto_build:
+	$(if $(filter nodoc,$(DEB_BUILD_OPTIONS)),,doxygen docs/Doxyfile)
+	dh_auto_build
